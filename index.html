@@ -250,10 +250,10 @@ footer{
 <section>
     <h2>Contact & Video</h2>
     <div class="contact-container">
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="Your Message"></textarea>
+        <form onsubmit="sendWhatsapp(); return false;">
+            <input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Mobile Number" required>
+<textarea rows="4" id="message" placeholder="Your Message"></textarea>
             <button class="btn">Submit</button>
         </form>
 
@@ -309,7 +309,24 @@ if(count>=500){clearInterval(interval);}
 document.getElementById("topBtn").onclick=function(){
 window.scrollTo({top:0,behavior:'smooth'});
 }
-</script>
 
+function sendWhatsApp(){
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let lang = document.getElementById("lang").value;
+    let mode = document.getElementById("mode").value;
+
+    let message = 
+    "New Admission Request%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Student Phone: " + phone + "%0A" +
+    "Course: " + lang + "%0A" +
+    "Mode: " + mode;
+
+    let yourNumber = "917708193862"; // Replace with your WhatsApp number (without +)
+
+    window.open("https://wa.me/" + yourNumber + "?text=" + message, "_blank");
+}
+</script>
 </body>
 </html>
