@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanishka Lingua Academy</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#ffffff;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{ width:120px; }
+
+.center-title{
+    font-size:28px;
+    font-weight:bold;
+    color:#2e7d32;
+}
+
+.contact-info{
+    text-align:right;
+    font-size:14px;
+}
+
+.contact-info i{
+    margin-right:5px;
+    color:#ff5722;
+}
+
+/* SLIDER */
+.slider{
+    position:relative;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1s;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.active{ opacity:1; }
+
+.slide-text{
+    position:absolute;
+    bottom:40px;
+    left:50px;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    background:rgba(0,0,0,0.5);
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+/* SECTION COMMON */
+section{
+    padding:40px 20px;
+    text-align:center;
+    background:#ffffff;
+    margin-top:20px;
+}
+
+h2{
+    color:#ff5722;
+    margin-bottom:30px;
+}
+
+/* COURSES */
+.course-box{
+    display:inline-block;
+    width:230px;
+    margin:15px;
+    padding:20px;
+    background:#f4f4f4;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.course-box:hover{ transform:translateY(-5px); }
+
+.course-box i{
+    font-size:35px;
+    margin-bottom:10px;
+    color:#2e7d32;
+}
+
+/* COUNTER */
+.counter{
+    font-size:30px;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+/* BUTTON */
+.btn{
+    background:#2e7d32;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin:10px;
+}
+
+/* FORM + YOUTUBE */
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+form{
+    width:350px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+/* SOCIAL */
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
+.youtube{background:#FF0000;}
+.facebook{background:#1877F2;}
+.instagram{background:#E4405F;}
+.whatsapp{background:#25D366;}
+.telegram{background:#0088cc;}
+.twitter{background:#000000;}
+.linkedin{background:#0A66C2;}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2e7d32;
+    color:white;
+}
+
+/* BACK TO TOP */
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#ff5722;
+    color:white;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <div class="center-title">Kanishka Lingua Academy</div>
+    <div class="contact-info">
+        <div><i class="fas fa-phone"></i> +91 7708193862</div>
+        <div><i class="fas fa-envelope"></i> kanishkalinguaacademy@gmail.com</div>
+    </div>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+        <div class="slide-text">DELE Spanish Certification</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+        <div class="slide-text">DELF French Certification</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+        <div class="slide-text">Cambridge English Exams</div>
+    </div>
+</div>
+
+<!-- COURSES -->
+<section>
+    <h2>Our Courses</h2>
+    <div class="course-box"><i class="fas fa-language"></i><h3>French<br>DELF exam</h3></div>
+    <div class="course-box"><i class="fas fa-globe"></i><h3>Spanish<br>DELE exam</h3></div>
+    <div class="course-box"><i class="fas fa-graduation-cap"></i><h3>Spoken English<br>Cambridge/IELTS</h3></div>
+    <div class="course-box"><i class="fas fa-torii-gate"></i><h3>Japanese<br>JLPT</h3></div>
+</section>
+
+<!-- COUNTERS -->
+<section>
+    <h2>Our Achievements</h2>
+    <div class="counter" id="students">0</div>
+    <p>Students Trained</p>
+</section>
+
+<!-- REGISTER + PAYMENT -->
+<section>
+    <h2>Register Now</h2>
+    <button class="btn">Online Registration</button>
+    <button class="btn">Pay Fees Online</button>
+</section>
+
+<!-- ENQUIRY + YOUTUBE -->
+<section>
+    <h2>Contact & Video</h2>
+    <div class="contact-container">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button class="btn">Submit</button>
+        </form>
+
+        <iframe 
+  width="100%" 
+  height="400"
+  src="https://www.youtube.com/embed/videoseries?list=PLmRRCqcA1DG0lEP382_mTMH4gNbGO2-QK"
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
+    </div>
+</section>
+
+<!-- SOCIAL -->
+<section>
+    <div class="social-icons">
+        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="telegram"><i class="fab fa-telegram"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kanishka Lingua Academy | All Rights Reserved
+</footer>
+
+<div id="topBtn">↑</div>
+
+<script>
+/* SLIDER */
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+setInterval(()=>{
+slides[index].classList.remove('active');
+index=(index+1)%slides.length;
+slides[index].classList.add('active');
+},3000);
+
+/* COUNTER */
+let count=0;
+let counter=document.getElementById("students");
+let interval=setInterval(()=>{
+count+=5;
+counter.innerText=count+"+";
+if(count>=500){clearInterval(interval);}
+},50);
+
+/* BACK TO TOP */
+document.getElementById("topBtn").onclick=function(){
+window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
